@@ -2,39 +2,39 @@
 # coding: utf-8
 
 # def power(x):
-# 	return x * x
+#   return x * x
 
-# print power(5)	
+# print power(5)    
 
 # 默认参数
 
-def power(x, n = 2):	
-	s = 1
-	while n > 0:
-		s *= x
-		n -= 1
-	return s
+def power(x, n = 2):    
+    s = 1
+    while n > 0:
+        s *= x
+        n -= 1
+    return s
 
-print(5)	
+print(5)    
 print power(5, 3)
 
 def enroll(name, gender, age = 6, city = 'LA'):
-	print 'name: ', name
-	print 'gender: ', gender
-	print 'ae: ', age
-	print 'city: ', city
+    print 'name: ', name
+    print 'gender: ', gender
+    print 'ae: ', age
+    print 'city: ', city
 
-enroll('Sam', 'M')	
+enroll('Sam', 'M')  
 enroll('Lucy', 'F', 8)
 enroll('Lily', 'F', city = 'Tex')
 
 # 所以，定义默认参数要牢记一点：默认参数必须指向不变对象！
 
 def add_end(L = None):
-	if L is None:
-		L = []
-	L.append('end')
-	return L
+    if L is None:
+        L = []
+    L.append('end')
+    return L
 
 print add_end
 print add_end
@@ -42,12 +42,12 @@ print add_end
 
 # 可变参数
 def calc(*numbers):
-	sum = 0
-	for n in numbers:
-		sum += power(n)
-	return sum
+    sum = 0
+    for n in numbers:
+        sum += power(n)
+    return sum
 
-print calc(1, 2, 3)	
+print calc(1, 2, 3) 
 
 # 在list或tuple前面加一个*号，把list或tuple的元素变成可变参数传进去
 nums = [1, 2, 3]
@@ -57,8 +57,8 @@ print calc(*nums)
 # 关键字参数
 print '关键字参数'
 def person(name, age, **kw):
-	# print 'name: ', name, 'age: ', age, 'others: ', kw
-	print 'name: %r, age: %r, others: %r' %(name, age, kw)
+    # print 'name: ', name, 'age: ', age, 'others: ', kw
+    print 'name: %r, age: %r, others: %r' %(name, age, kw)
 
 print person('Micheal', 30)
 
@@ -73,7 +73,7 @@ print person('Jack', '40', **kw)
 # 参数定义的顺序必须是：必选参数、默认参数、可变参数和关键字参数
 print '所有参数'
 def func(a, b, c = 0, *args, **kw):
-	print 'a = ', a, 'b = ', b, 'c = ', c, 'args = ', args, 'kw = ', kw
+    print 'a = ', a, 'b = ', b, 'c = ', c, 'args = ', args, 'kw = ', kw
 
 print func(1, 2)
 print func(1, 2, 5)
