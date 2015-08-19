@@ -13,7 +13,13 @@ reload(sys)
 # sys.setdefaultencoding("utf-8")
 
 from handlers.index import IndexHandler
+from handlers.user import UserHandler
+from handlers.sleep import SleepHandler
+from handlers.sleep import SeeHandler
 
 url = [
-    (r"/", IndexHandler)
+    (r"/", IndexHandler),
+    (r'/user', UserHandler),
+    (r'/sleep', UserHandler),
+    (r'/see', SeeHandler),
 ]
